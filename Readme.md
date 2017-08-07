@@ -217,6 +217,10 @@ argument, and the `stat` object returned by Node's `fs.stat` function as their
 second argument, and must return either `true` to ignore the file, or `false` to
 keep it.
 
+#### #ignoreWrite(path)
+
+Ignore files/paths from being read and written to disk. However, they will still be processed. Metalsmith will add them to the `files` list, the files themselves simply won't be copied over.
+
 #### #metadata(json)
 
 Get the global metadata. This is useful for plugins that want to set global-level metadata that can be applied to all files.
